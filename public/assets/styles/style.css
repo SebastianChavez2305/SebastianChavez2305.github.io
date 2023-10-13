@@ -1,0 +1,723 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --azul1: #05668d;
+  --azul2: #427aa1;
+  --blanco-azulado: #ebf2fa;
+  --verde-oscuro: #679436;
+  --verde-claro: #a5be00;
+  --marron: #915d49;
+  --blanco: #ffffff;
+  --negro: #272727;
+}
+
+#header {
+  background-color: rgb(37, 36, 36);
+  top: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+#header #footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 125px 100px;
+}
+
+#header img {
+  width: 2%;
+  position: relative;
+  right: -80px;
+}
+
+@media (max-width: 1000px) {
+  section {
+    padding: 100px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 80px 30px;
+  }
+}
+
+#hero {
+  background-image: url("../images/hero-image.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  display: flex; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  width: 100%;
+  height: 100%;
+  padding: 14rem 0;
+}
+
+#hero h1 .hero-title-header {
+  font-size: 1.5rem;
+}
+
+#hero h1 .hero-title {
+  font-size: 6rem;
+}
+
+#hero-btn {
+  margin-top: 1rem;
+  background-color: var(
+    --verde-claro
+  ); /* Usa la variable para el color de fondo */
+  color: var(--blanco); /* Usa la variable para el color del texto */
+  font-size: 1rem;
+  padding: 0.5rem 2rem; /* Ajusta el espaciado según tus preferencias */
+  border: 1px solid var(--verde-claro); /* Borde ligeramente bordeado */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Agregar una transición suave */
+
+  /* Efecto de hover */
+  &:hover {
+    background-color: var(
+      --verde-claro
+    ); /* Cambia el color de fondo al hacer hover */
+    border: 1px solid var(--verde-oscuro);
+    color: var(--blanco); /* Cambia el color del texto al hacer hover */
+  }
+
+  /* Efecto de clic */
+  &:active {
+    background-color: var(--azul1); /* Cambia el color de fondo al hacer clic */
+  }
+}
+
+/* Estilos para los botones de descarga */
+.app-download-button,
+.play-download-button {
+  display: inline-block;
+  margin: 20px 5px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+  color: var(--blanco);
+  text-decoration: none;
+  border: 1px solid var(--blanco);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efectos de hover y clic para los botones */
+.app-download-button:hover,
+.play-download-button:hover {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.app-download-button:active,
+.play-download-button:active {
+  background-color: var(--verde-oscuro);
+}
+
+/* Section Nùmeros -----------------------------------*/
+.numeros {
+  background-color: var(--blanco);
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--verde-oscuro) 70%, #fff 30%);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 125px 100px;
+}
+.numeros h3 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+ul.cuadricula {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.numeros .cuadricula li {
+  padding: 0 30px;
+  flex-basis: auto;
+  text-align: center;
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(18, 18, 18, 0.75);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 3%;
+  border-radius: 15%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #fff;
+}
+.beneficios .cuadricula li img {
+  font-size: 50px;
+  margin-bottom: 20px;
+  min-height: 150px;
+  max-height: 150px;
+}
+.numeros .cuadricula li h3 {
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.numeros .cuadricula li p {
+  font-size: 19px;
+  color: #666;
+  line-height: 1.5;
+}
+@media (max-width: 1000px) {
+  .numeros .cuadricula li {
+    flex-basis: 35%;
+    margin-bottom: 65px;
+    min-width: 205px;
+  }
+
+  .numeros .cuadricula li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .numeros .cuadricula li {
+    flex-basis: 33%;
+  }
+  .numeros .cuadricula li {
+    width: 100%;
+    min-width: 205px;
+  }
+}
+/* Section Nùmeros ---------------------------*/
+
+#planifica {
+  background-color: #f5f5f5;
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+#planifica h3 {
+  font-size: 40px;
+  color: #05668d;
+  margin-bottom: 30px;
+}
+#planifica h3 span {
+  color: #679436;
+}
+
+.logo {
+  position: absolute;
+  top: 30px; /* Ajusta la distancia desde la parte superior según tus preferencias */
+  left: 50px; /* Ajusta la distancia desde la izquierda según tus preferencias */
+  z-index: 1; /* Asegura que el logotipo esté en la parte superior */
+}
+
+.card {
+  position: relative;
+  width: 1000px;
+  height: 200px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.card-overlay-text {
+  max-width: 50%;
+}
+
+.card-overlay h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-overlay p {
+  font-size: 1rem;
+}
+
+/* Section Beneficios*/
+.beneficios {
+  background-color: var(--blanco);
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 125px 100px;
+}
+.beneficios h3 {
+  font-size: 40px;
+  color: #05668d;
+  margin-bottom: 30px;
+}
+.beneficios h3 span {
+  color:  var(--verde-oscuro);
+}
+ul.cuadricula {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.beneficios .cuadricula li {
+  padding: 0 30px;
+  flex-basis: 20%;
+  text-align: center;
+}
+.beneficios .cuadricula li img {
+  font-size: 50px;
+  margin-bottom: 20px;
+  min-height: 150px;
+  max-height: 150px;
+}
+.beneficios .cuadricula li h4 {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.beneficios .cuadricula li p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+@media (max-width: 1000px) {
+  .beneficios .cuadricula li {
+    flex-basis: 70%;
+    margin-bottom: 65px;
+  }
+
+  .beneficios .cuadricula li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .beneficios .cuadricula li {
+    flex-basis: 100%;
+  }
+}
+/*Fin Beneficios*/
+
+/* Points */
+#points {
+  color: var(--negro);
+  text-align: center;
+  display: flex; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+  background-color: var(--blanco-azulado);
+  flex-direction: column;
+}
+#points .elements {
+  display: flex; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 50px;
+}
+#points .element {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2em;
+}
+#points h2 {
+  margin-bottom: 1em;
+  font-weight: 600;
+  font-size: 35px;
+}
+#points h2 span {
+  color: var(--verde-claro);
+}
+
+#points .point-card {
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em;
+  border-radius: 18px;
+  background: var(--Blanco, #fff);
+  box-shadow: 0px 2px 4px 0px rgba(141, 141, 141, 0.25);
+}
+
+#points .point-card.overflow {
+  margin-top: 100px;
+}
+
+#points .point-card .image-card {
+  margin-top: -100px;
+}
+
+#points h5 {
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--azul1);
+}
+#points .point {
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--azul1);
+}
+#points .element .description {
+  font-size: 20px;
+  font-weight: normal;
+}
+#points .element .description span {
+  font-weight: 600;
+  color: var(--azul1);
+}
+#points .percent {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 60px;
+}
+#points .cashback {
+  color: #787878;
+  font-size: 20px;
+}
+
+#points .point-card.secondary {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  text-align: left;
+}
+
+#points .point-card.secondary .hightlight {
+  color: var(--azul1);
+}
+
+/* Estilos para el contenedor principal */
+#disfrutar {
+  text-align: center;
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+/* Estilos para el diseño flexible */
+#disfrutar .flex {
+  display: flex;
+  justify-content: space-between;
+  height: 100%; /* Para ocupar toda la altura disponible dentro de .container */
+}
+
+#disfrutar .flex > div {
+  flex: 1;
+  padding: 20px; /* Añade algún espacio entre los elementos dentro del div */
+}
+
+#disfrutar .flex p {
+  font-size: 14px;
+  font-weight: medium; /* Cambia la ponderación de la fuente a medium */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para los encabezados */
+#disfrutar .header {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--azul1);
+}
+
+#disfrutar .subheader {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+
+#disfrutar .enjoy {
+  color: var(--verde-oscuro);
+}
+
+/* Estilo para la clase imagen-izq */
+#disfrutar .imagen-izq {
+  float: left; /* Alinea la imagen a la izquierda */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para el contenedor de la imagen izquierda */
+#disfrutar .imagen-izq-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+}
+
+
+
+#iniciativa {
+  background-color: rgb(255, 254, 254);
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iniciativa img {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.iniciativa-title {
+  font-size: x-large;
+  height: auto;
+  color:black;
+}
+
+/* Footer */
+
+p.cab {
+  height: auto;
+  color: white;
+  position: relative;
+  right: -80px;
+  top: 5px;
+}
+
+#footer {
+  background-color: rgb(37, 36, 36);
+  padding: 10px;
+  display: flex;
+}
+
+p.redes {
+  font-size: x-large;
+  height: auto;
+  color: white;
+  position: relative;
+  right: -250px;
+  top: 30px;
+}
+
+p.contactanos {
+  font-size: x-large;
+  height: auto;
+  color: white;
+  position: relative;
+  right: -675px;
+  top: 30px;
+}
+
+p.numero {
+  font-size: x-large;
+  height: auto;
+  color: white;
+  position: relative;
+  right: -250px;
+  top: 80px;
+}
+
+p.email {
+  font-size: x-large;
+  height: auto;
+  color: white;
+  position: relative;
+  right: -125px;
+  top: 130px;
+}
+
+li .phone {
+  color: #fff;
+  font-size: 1.6em;
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  transition: 0.25s;
+  right: -675px;
+  top: 30px;
+}
+
+li .letter {
+  color: #fff;
+  font-size: 1.6em;
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  transition: 0.25s;
+  right: -675px;
+  top: 30px;
+}
+
+hr {
+  height: 30vh;
+  width: 0.25vw;
+  border-width: 0;
+  position: relative;
+  right: -375px;
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+.sci {
+  display: flex;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  color: #fff;
+  font-size: 1.6em;
+  margin-right: 10px;
+  display: inline-block;
+  transition: 0.25s;
+  position: relative;
+  right: -1100px;
+}
+.sci li a:hover {
+  transform: translateY(-5px);
+}
+
+.fsci {
+  display: flex;
+}
+.fsci li {
+  list-style: none;
+}
+.fsci li a {
+  color: #fff;
+  font-size: 3em;
+  margin-right: 25px;
+  display: inline-block;
+  transition: 0.25s;
+  position: relative;
+  right: 80px;
+  top: 100px;
+}
+.fsci li a:hover {
+  transform: translateY(-5px);
+}
+
+.psci {
+  display: flex;
+}
+.psci li {
+  list-style: none;
+}
+.psci li a {
+  color: #fff;
+  font-size: 3em;
+  margin-right: 25px;
+  display: inline-block;
+  transition: 0.25s;
+  position: relative;
+  right: -325px;
+  top: 70px;
+}
+.psci li a:hover {
+  transform: translateY(-5px);
+}
+
+.msci {
+  display: flex;
+}
+.msci li {
+  list-style: none;
+}
+.msci li a {
+  color: #fff;
+  font-size: 3em;
+  margin-right: 25px;
+  display: inline-block;
+  transition: 0.25s;
+  position: relative;
+  right: -255px;
+  top: 125px;
+}
+.msci li a:hover {
+  transform: translateY(-5px);
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: #2196f3;
+  z-index: -1;
+}
+
+.background-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #414a4f;
+  opacity: 0.75;
+}
