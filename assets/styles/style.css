@@ -511,6 +511,32 @@ ul.cuadricula {
   align-items: center; /* Alinea verticalmente la imagen y el texto */
 }
 
+
+
+#iniciativa {
+  background-color: rgb(255, 254, 254);
+  background-image: url("/public/assets/images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iniciativa img {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.iniciativa-title {
+  font-size: x-large;
+  height: auto;
+  color:black;
+}
+
 /* Footer */
 
 p.cab {
